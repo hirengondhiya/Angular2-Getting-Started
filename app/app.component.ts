@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 
 @Component({
+    moduleId: module.id,
     selector: 'pm-app',
     template: `
         <div><h1>{{pageTitle}}</h1></div>
