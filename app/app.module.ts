@@ -7,10 +7,13 @@ import { ProductListComponent } from './products/product-list.component';
 import { ProductNameFilterPipe } from './products/product-name-filter.pipe';
 import { StarComponent } from './shared/star.component';
 
+import { ProductService } from './products/product.service';
+
 @NgModule({
   imports: [ BrowserModule,
             FormsModule ],
   declarations: [ AppComponent, ProductListComponent, ProductNameFilterPipe, StarComponent ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  providers: [ ProductService ]
 })
 export class AppModule { }
