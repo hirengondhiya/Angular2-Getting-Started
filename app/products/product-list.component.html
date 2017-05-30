@@ -59,4 +59,8 @@
     <div *ngIf='messages && messages.length' >
         <div *ngFor='let message of messages' > {{message}} </div>
     </div>
+
+    <div *ngIf='errorMessage'>
+        <b>Error:</b> {{ errorMessage }}
+    </div>
 </div>
