@@ -43,7 +43,7 @@
                         <td>{{product.productCode | lowercase}}</td>
                         <td>{{product.price | currency:'AUD': false : '1.2-2' }}</td>
                         <td>{{product.releaseDate}}</td>
-                        <td>{{product.starRating}}</td>
+                        <td> <ai-star [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)' ></ai-star> </td>
                     </tr>
                 </tbody>
             </table> 
@@ -54,5 +54,9 @@
         <div class="row">
             <div class="col-md-6">Sorry no products found.</div>
         </div>
+    </div>
+
+    <div *ngIf='messages && messages.length' >
+        <div *ngFor='let message of messages' > {{message}} </div>
     </div>
 </div>

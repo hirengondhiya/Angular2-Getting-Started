@@ -13,6 +13,7 @@ export class ProductListComponent
     pageTitle: string = "Products List";
     showImage: boolean = false;
     productFilter: string = 'cart';
+    messages: string[] = [];
     products: IProduct[] = [
     {
         "productId": 1,
@@ -51,5 +52,8 @@ export class ProductListComponent
 
     ngOnInit() : void {
         console.log('On init: Product component');
+    }
+    onRatingClicked(message:string) : void {
+        this.messages.push(message);
     }
 }
